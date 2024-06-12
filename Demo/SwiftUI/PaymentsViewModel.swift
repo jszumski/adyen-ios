@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-internal final class PaymentsViewModel: ObservableObject, Identifiable, Presenter {
+internal final class PaymentsViewModel: AdyenObservableObject, Identifiable, Presenter {
 
     private lazy var integrationExample: IntegrationExample = {
         let integrationExample = IntegrationExample()

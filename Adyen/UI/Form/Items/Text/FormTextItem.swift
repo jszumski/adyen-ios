@@ -12,7 +12,7 @@ import UIKit
 open class FormTextItem: FormValueItem<String, FormTextItemStyle>, ValidatableFormItem, InputViewRequiringFormItem {
 
     /// The placeholder of the text field.
-    @Observable(nil) public var placeholder: String?
+    @AdyenObservable(nil) public var placeholder: String?
     
     /// :nodoc:
     override public var value: String {
@@ -26,8 +26,8 @@ open class FormTextItem: FormValueItem<String, FormTextItemStyle>, ValidatableFo
     /// The validator to use for validating the text in the text field.
     public var validator: Validator?
 
-    /// A message that is displayed when validation fails. Observable.
-    @Observable(nil) public var validationFailureMessage: String?
+    /// A message that is displayed when validation fails. AdyenObservable.
+    @AdyenObservable(nil) public var validationFailureMessage: String?
 
     /// The auto-capitalization style for the text field.
     public var autocapitalizationType: UITextAutocapitalizationType = .sentences
@@ -54,7 +54,7 @@ open class FormTextItem: FormValueItem<String, FormTextItemStyle>, ValidatableFo
     }
     
     /// The formatted text value.
-    @Observable("") internal var formattedValue: String
+    @AdyenObservable("") internal var formattedValue: String
 
     // MARK: - Private
 
